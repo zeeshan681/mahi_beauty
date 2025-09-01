@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Features/app_color.dart';
 
 class ButtonLarge extends StatelessWidget {
@@ -32,7 +33,7 @@ class ButtonLarge extends StatelessWidget {
         backgroundColor: AppColor.primaryColor,
         fixedSize: Size(width, height),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(50),
+          borderRadius: BorderRadiusGeometry.circular(50.r),
         ),
       ),
       child: Padding(

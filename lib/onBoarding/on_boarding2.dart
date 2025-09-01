@@ -1,11 +1,13 @@
 // ignore_for_file: camel_case_types, empty_constructor_bodies
 import 'package:flutter/material.dart';
-import 'package:mahi_beauty/Features/CustomText/body_text.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mahi_beauty/Features/CustomText/bodytext_large.dart';
 import 'package:mahi_beauty/Features/CustomText/heading3.dart';
+import 'package:mahi_beauty/Features/app_color.dart';
 import 'package:mahi_beauty/Features/button_large.dart';
-import 'package:mahi_beauty/Features/page_view.dart';
 import 'package:mahi_beauty/Features/signin_text.dart';
 import 'package:mahi_beauty/onBoarding/on_boarding3.dart';
+import 'package:mahi_beauty/views/auth/log_in.dart';
 
 class OnBoarding2 extends StatelessWidget {
   const OnBoarding2({super.key});
@@ -21,19 +23,19 @@ class OnBoarding2 extends StatelessWidget {
               children: [
                 // Image at the top
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(32),
+                  borderRadius: BorderRadius.circular(32.r),
                   child: Image.asset(
                     "assets/images/onBoarding2.png",
-                    width: 375,
-                    height: 812,
+                    width: 375.w,
+                    height: 812.h,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 242.0),
                   child: Image.asset(
                     "assets/images/overlay.png",
-                    width: 375,
-                    height: 570,
+                    width: 375.w,
+                    height: 570.h,
                   ),
                 ),
                 //main ui
@@ -45,15 +47,20 @@ class OnBoarding2 extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Heading3(text: "Meet Our Specialists"),
-                          SizedBox(height: 15),
-                          BodyText(text: "There are many best stylists from"),
-                          BodyText(text: "all the best salons ever"),
+                          Heading3(
+                            text: "Meet Our Specialists",
+                            color: AppColor.whiteColor,
+                          ),
+                          SizedBox(height: 15.h),
+                          BodyText(
+                            text:
+                                "There are many best stylists from\n all the best salons ever",
+                          ),
                         ],
                       ),
-                      SizedBox(height: 40),
-                      PageViewIndicator(),
-                      SizedBox(height: 20),
+                      SizedBox(height: 40.h),
+                      // PageViewIndicator(),
+                      SizedBox(height: 20.h),
                       ButtonLarge(
                         text: "Next",
                         onPressed: () {
@@ -64,16 +71,27 @@ class OnBoarding2 extends StatelessWidget {
                             ),
                           );
                         },
-                        width: 335,
-                        height: 60,
-                        top: 16,
-                        bottom: 16,
-                        left: 32,
-                        right: 32,
+                        width: 335.w,
+                        height: 60.w,
+                        top: 16.w,
+                        bottom: 16.w,
+                        left: 32.w,
+                        right: 32.w,
                       ),
-                      SizedBox(height: 25),
-                      SignInText(),
-                      SizedBox(height: 70),
+                      SizedBox(height: 25.h),
+                      SignInText(
+                        text1: 'Already have an account?',
+                        color1: AppColor.whiteColor,
+                        text2: 'Sign In',
+                        color2: AppColor.secondaryColor,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LogIn()),
+                          );
+                        },
+                      ),
+                      SizedBox(height: 70.h),
                     ],
                   ),
                 ),

@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/onBoarding/on_boarding1.dart';
 import 'package:mahi_beauty/onBoarding/on_boarding2.dart';
 import 'package:mahi_beauty/onBoarding/on_boarding3.dart';
@@ -36,8 +37,8 @@ class PageViewIndicator extends StatelessWidget {
             controller: _controller,
             count: 3,
             effect: ExpandingDotsEffect(
-              dotHeight: 12,
-              dotWidth: 12,
+              dotHeight: 12.h,
+              dotWidth: 12.w,
               spacing: 8,
               dotColor: AppColor.whiteColor,
               activeDotColor: AppColor.secondaryColor,

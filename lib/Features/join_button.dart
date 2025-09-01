@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Features/app_color.dart';
 
 class JoinButton extends StatelessWidget {
@@ -11,18 +12,23 @@ class JoinButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColor.whiteColor,
         side: BorderSide(color: AppColor.whiteColor),
-        fixedSize: Size(343, 54),
+        fixedSize: Size(343.w, 54.h),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(50),
+          borderRadius: BorderRadiusGeometry.circular(50.r),
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.only(top: 16, left: 32, right: 32, bottom: 16),
+        padding: EdgeInsets.only(
+          top: 16.h,
+          left: 32.w,
+          right: 32.w,
+          bottom: 16.h,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/images/google.png", width: 20, height: 20),
-            SizedBox(width: 20),
+            Image.asset("assets/images/google.png", width: 20.w, height: 20.h),
+            SizedBox(width: 20.w),
             Text(
               "Join with Google",
               style: TextStyle(

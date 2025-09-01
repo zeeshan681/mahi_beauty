@@ -11,7 +11,7 @@ class BodyText extends StatelessWidget {
       text,
       style: TextStyle(
         fontSize: 16,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w400,
         color: AppColor.whiteColor,
         fontFamily: "NunitoSans",
       ),

@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:mahi_beauty/Features/app_color.dart';
 
 class SignInText extends StatelessWidget {
-  const SignInText({super.key});
+  final String text1;
+  final String text2;
+  final Color color1;
+  final Color color2;
+  final VoidCallback onPressed;
+  const SignInText({
+    super.key,
+    required this.text1,
+    required this.text2,
+    required this.color1,
+    required this.color2,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,22 +21,25 @@ class SignInText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Already have an account? ",
+          text1,
           style: TextStyle(
-            color: AppColor.whiteColor,
+            color: color1,
             fontSize: 14,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.68,
             fontFamily: 'NunitoSans',
           ),
         ),
-        Text(
-          "Sign In",
-          style: TextStyle(
-            color: AppColor.secondaryColor,
-            fontSize: 14,
-            fontWeight: FontWeight.w900,
-            fontFamily: 'Manrope',
+        TextButton(
+          onPressed: onPressed,
+          child: Text(
+            text2,
+            style: TextStyle(
+              color: color2,
+              fontSize: 14,
+              fontWeight: FontWeight.w900,
+              fontFamily: 'Manrope',
+            ),
           ),
         ),
       ],
