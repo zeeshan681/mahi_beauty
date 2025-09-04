@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Features/CustomText/bodytext_large.dart';
 import 'package:mahi_beauty/Features/CustomText/heading3.dart';
 import 'package:mahi_beauty/Features/app_color.dart';
-import 'package:mahi_beauty/Features/button_large.dart';
+import 'package:mahi_beauty/Features/CustomButton/button_large.dart';
 import 'package:mahi_beauty/Features/signin_text.dart';
 import 'package:mahi_beauty/onBoarding/on_boarding2.dart';
 import 'package:mahi_beauty/views/auth/log_in.dart';

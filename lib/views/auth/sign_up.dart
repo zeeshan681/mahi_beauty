@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Features/CustomText/bodytext_medium.dart';
+import 'package:mahi_beauty/Features/CustomText/bodytext_small.dart';
 import 'package:mahi_beauty/Features/CustomText/heading3.dart';
+import 'package:mahi_beauty/Features/CustomText/heading7.dart';
 import 'package:mahi_beauty/Features/app_color.dart';
-import 'package:mahi_beauty/Features/button_large.dart';
+import 'package:mahi_beauty/Features/CustomButton/button_large.dart';
 import 'package:mahi_beauty/Features/forms/customfield_input.dart';
 import 'package:mahi_beauty/Features/forms/dividerline.dart';
 import 'package:mahi_beauty/Features/forms/password_input.dart';
 import 'package:mahi_beauty/Features/forms/phone_field.dart';
-import 'package:mahi_beauty/Features/join_button.dart';
+import 'package:mahi_beauty/Features/CustomButton/join_button.dart';
 import 'package:mahi_beauty/Features/signin_text.dart';
 import 'package:mahi_beauty/views/auth/log_in.dart';
 
@@ -105,13 +107,23 @@ class _SignUpState extends State<SignUp> {
                   //forget password
                   Container(
                     width: 343.w,
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      child: BodytextMedium(
-                        text: 'Forget Password?',
-                        color: AppColor.primaryColor,
-                      ),
-                      onPressed: () {},
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            BodytextSmall(
+                              text: 'By Signing up you agree to our',
+                              color: AppColor.grey80,
+                            ),
+                            Heading7(
+                              text: 'Term of use and privacy',
+                              color: AppColor.primaryColor,
+                            ),
+                          ],
+                        ),
+                        BodytextSmall(text: 'notice', color: AppColor.grey80),
+                      ],
                     ),
                   ),
                 ],

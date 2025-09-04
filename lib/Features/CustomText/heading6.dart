@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:mahi_beauty/Features/app_color.dart';
 
-class Heading7 extends StatelessWidget {
+class Heading6 extends StatelessWidget {
   final String text;
-  final Color color;
-  const Heading7({super.key, required this.text, required this.color});
+  const Heading6({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: TextStyle(
-        color: color,
-        fontSize: 12,
+        color: AppColor.whiteColor,
+        fontSize: 14,
         fontWeight: FontWeight.w700,
         fontFamily: 'Manrope',
       ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class BodytextSmall extends StatelessWidget {
+class Heading5 extends StatelessWidget {
   final String text;
   final Color color;
-  const BodytextSmall({super.key, required this.text, required this.color});
+  const Heading5({super.key, required this.text, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +11,9 @@ class BodytextSmall extends StatelessWidget {
       text,
       style: TextStyle(
         color: color,
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-        fontFamily: 'NunitoSans',
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+        fontFamily: 'Manrope',
       ),
     );
   }

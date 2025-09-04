@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Features/CustomText/bodytext_medium.dart';
 import 'package:mahi_beauty/Features/CustomText/heading3.dart';
 import 'package:mahi_beauty/Features/app_color.dart';
-import 'package:mahi_beauty/Features/button_large.dart';
+import 'package:mahi_beauty/Features/CustomButton/button_large.dart';
 import 'package:mahi_beauty/Features/forms/password_input.dart';
 import 'package:mahi_beauty/views/auth/log_in.dart';
 
