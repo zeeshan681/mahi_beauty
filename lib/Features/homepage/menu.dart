@@ -25,6 +25,7 @@ class HomeMenu extends StatelessWidget {
       width: 375.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           // Title
           Padding(
@@ -43,7 +44,7 @@ class HomeMenu extends StatelessWidget {
                 crossAxisCount: 4,
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 5,
-                childAspectRatio: 1,
+                childAspectRatio: 0.55,
               ),
               itemCount: services.length,
               itemBuilder: (context, index) {
