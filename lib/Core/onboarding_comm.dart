@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mahi_beauty/Views/03_Signin_Screen/signin_screen.dart';
 
 class OnboardingComm extends StatelessWidget {
   final String image;
@@ -77,12 +78,12 @@ class OnboardingComm extends StatelessWidget {
 
               SizedBox(
                 width: double.infinity,
-                height: 55,
+                height: 63,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff156778),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                   onPressed: onNext,
@@ -104,7 +105,12 @@ class OnboardingComm extends StatelessWidget {
                   ),
                   const SizedBox(width: 5),
                   InkWell(
-                    onTap: onSignIn,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SigninScreen()),
+                      );
+                    },
                     child: const Text(
                       "Sign In",
                       style: TextStyle(
@@ -117,6 +123,7 @@ class OnboardingComm extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 35),
             ],
           ),
         ),

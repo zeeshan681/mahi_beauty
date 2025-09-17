@@ -63,7 +63,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Align(
             alignment: AlignmentGeometry.bottomCenter,
             child: Padding(
-              padding: EdgeInsets.only(bottom: 160),
+              padding: EdgeInsets.only(bottom: 200),
               child: SmoothPageIndicator(
                 controller: _controller,
                 count: onboardingData.length,
