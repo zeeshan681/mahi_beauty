@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
             PromoCard(),
             SizedBox(height: 20.h),
             HomeMenu(),
+            SizedBox(height: 20.h),
           ],
         ),
       ),

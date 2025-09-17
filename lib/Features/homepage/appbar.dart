@@ -15,7 +15,8 @@ class MyAppBar extends StatelessWidget {
         width: 375.w,
         height: 80.h,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,9 +30,10 @@ class MyAppBar extends StatelessWidget {
             ),
             CircleAvatar(
               backgroundColor: AppColor.primaryColor,
+              radius: 25,
               child: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.search, color: AppColor.whiteColor),
+                icon: Icon(Icons.search, color: AppColor.whiteColor, size: 25),
               ),
             ),
           ],

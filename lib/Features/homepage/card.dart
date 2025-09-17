@@ -35,36 +35,34 @@ class PromoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 //Text and Button Overlay
-                Positioned.fill(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 22, left: 24),
-                        child: const Heading6(
-                          text: 'Look more beautiful and\n save more discount',
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 22, left: 24),
+                      child: const Heading6(
+                        text: 'Look more beautiful and\n save more discount',
+                      ),
+                    ),
+                    // const Spacer(),
+                    Container(
+                      height: 27.h,
+                      width: 147.w,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: AppColor.secondary20,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(50.r),
+                          bottomRight: Radius.circular(50.r),
                         ),
                       ),
-                      // const Spacer(),
-                      Container(
-                        height: 27.h,
-                        width: 147.w,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: AppColor.secondary20,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(50.r),
-                            bottomRight: Radius.circular(50.r),
-                          ),
-                        ),
-                        child: Heading5(
-                          text: 'Get offer now!',
-                          color: AppColor.secondaryColor,
-                        ),
+                      child: Heading5(
+                        text: 'Get offer now!',
+                        color: AppColor.secondaryColor,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 // // 50% text
                 Padding(
