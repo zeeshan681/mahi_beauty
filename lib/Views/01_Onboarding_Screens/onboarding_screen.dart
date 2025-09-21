@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Core/onboarding_comm.dart';
 import 'package:mahi_beauty/Views/02_Started_Screen/started_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -63,7 +64,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Align(
             alignment: AlignmentGeometry.bottomCenter,
             child: Padding(
-              padding: EdgeInsets.only(bottom: 200),
+              padding: EdgeInsets.only(bottom: 200.h),
               child: SmoothPageIndicator(
                 controller: _controller,
                 count: onboardingData.length,
@@ -71,9 +72,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   dotColor: Colors.white,
 
                   activeDotColor: Color(0XFFF98600),
-                  dotHeight: 8,
-                  dotWidth: 8,
-                  spacing: 3,
+                  dotHeight: 8.h,
+                  dotWidth: 8.w,
+                  spacing: 3.w,
                   expansionFactor: 4,
                 ),
               ),

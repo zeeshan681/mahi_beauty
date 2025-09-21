@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mahi_beauty/Core/onboarding_comm.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Views/03_Signin_Screen/signin_screen.dart';
 
 class StartedScreen extends StatefulWidget {
@@ -42,35 +42,35 @@ class _StartedScreenState extends State<StartedScreen> {
             children: [
               Text(
                 "Let’s Join with Us",
-                style: const TextStyle(
-                  fontSize: 30,
+                style: TextStyle(
+                  fontSize: 28.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               Text(
                 "Find and book Beauty, Salon, Barber/nand Spa services anywhere, anytime",
-                style: const TextStyle(
-                  fontSize: 18,
+                style: TextStyle(
+                  fontSize: 15.sp,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 50.h),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: SizedBox(
                   width: double.infinity,
-                  height: 63,
+                  height: 52.h,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(30.r),
                       ),
                     ),
                     onPressed: () {},
@@ -78,15 +78,15 @@ class _StartedScreenState extends State<StartedScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 40,
-                          width: 40,
+                          height: 40.h,
+                          width: 40.w,
                           child: Image.asset("assets/images/google.png"),
                         ),
 
                         Text(
                           "Join with Google",
-                          style: const TextStyle(
-                            fontSize: 20,
+                          style: TextStyle(
+                            fontSize: 18.sp,
                             color: Color(0xff156778),
                           ),
                         ),
@@ -95,17 +95,17 @@ class _StartedScreenState extends State<StartedScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: SizedBox(
                   width: double.infinity,
-                  height: 63,
+                  height: 52.h,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xff156778),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(30.r),
                       ),
                     ),
                     onPressed: () {},
@@ -116,8 +116,8 @@ class _StartedScreenState extends State<StartedScreen> {
                         SizedBox(width: 10),
                         Text(
                           "Join with email",
-                          style: const TextStyle(
-                            fontSize: 20,
+                          style: TextStyle(
+                            fontSize: 18.sp,
                             color: Colors.white,
                           ),
                         ),
@@ -126,15 +126,15 @@ class _StartedScreenState extends State<StartedScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 45),
+              SizedBox(height: 38.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Already have an account",
-                    style: const TextStyle(fontSize: 15, color: Colors.white),
+                    style: TextStyle(fontSize: 15.sp, color: Colors.white),
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5.w),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -142,10 +142,10 @@ class _StartedScreenState extends State<StartedScreen> {
                         MaterialPageRoute(builder: (context) => SigninScreen()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       "Sign In",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15.sp,
                         fontWeight: FontWeight.bold,
                         color: Color(0XFFF98600),
                         decoration: TextDecoration.underline,
@@ -154,7 +154,7 @@ class _StartedScreenState extends State<StartedScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 60),
+              SizedBox(height: 50.h),
             ],
           ),
         ],
