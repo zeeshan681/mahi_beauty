@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mahi_beauty/Views/03_Signin_Screen/signin_screen.dart';
 
 class OnboardingComm extends StatelessWidget {
   final String image;
@@ -48,7 +50,7 @@ class OnboardingComm extends StatelessWidget {
         ),
 
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 40.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
 
@@ -56,20 +58,20 @@ class OnboardingComm extends StatelessWidget {
               Spacer(flex: 102),
               Text(
                 titel,
-                style: const TextStyle(
-                  fontSize: 30,
+                style: TextStyle(
+                  fontSize: 28.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
 
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               Text(
                 description,
-                style: const TextStyle(
-                  fontSize: 18,
+                style: TextStyle(
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),
@@ -79,38 +81,42 @@ class OnboardingComm extends StatelessWidget {
 
               SizedBox(
                 width: double.infinity,
-                height: 55,
+                height: 52.h,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff156778),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(30.r),
                     ),
                   ),
                   onPressed: onNext,
                   child: Text(
                     buttonText,
-                    style: const TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 18.sp, color: Colors.white),
                   ),
                 ),
               ),
-
-              const SizedBox(height: 15),
+              SizedBox(height: 15.h),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     subtitle,
-                    style: const TextStyle(fontSize: 15, color: Colors.white),
+                    style: TextStyle(fontSize: 15.sp, color: Colors.white),
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5.w),
                   InkWell(
-                    onTap: onSignIn,
-                    child: const Text(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SigninScreen()),
+                      );
+                    },
+                    child: Text(
                       "Sign In",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15.sp,
                         fontWeight: FontWeight.bold,
                         color: Color(0XFFF98600),
                         decoration: TextDecoration.underline,
@@ -119,6 +125,7 @@ class OnboardingComm extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 35.h),
             ],
           ),
         ),

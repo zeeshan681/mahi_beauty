@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mahi_beauty/Core/coustm_colors.dart';
 import 'package:mahi_beauty/Views/01_Onboarding_Screens/onboarding_screen.dart';
 
@@ -48,7 +49,11 @@ class _SplashScreenState extends State<SplashScreen>
       body: Center(
         child: FadeTransition(
           opacity: _animation,
-          child: Image.asset("assets/images/Logo.png"),
+          child: Image.asset(
+            "assets/images/Logo.png",
+            width: 200.w,
+            height: 200.h,
+          ),
         ),
       ),
     );
