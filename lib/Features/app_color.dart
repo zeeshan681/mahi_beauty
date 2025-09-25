@@ -16,4 +16,6 @@ class AppColor {
   static const Color ellipse16 = Color(0xFFC1071A);
   static const Color ellipse15 = Color(0xFFC1071F);
   static const Color ellipse19 = Color(0xFFC4C4C4);
+  static const Color accentLight = Color(0xFFFEF1F2);
+  static const Color anccentRed = Color(0xFFED4C5C);
 }
